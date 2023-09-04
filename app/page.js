@@ -11,7 +11,7 @@ export default async function Home() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({secret: secret_token}),
+      body: JSON.stringify({ secret: secret_token }),
       //cache: "no-store", //disable cache
       next: { revalidate: 60 }, //in seconds
     });
@@ -28,15 +28,21 @@ export default async function Home() {
   return (
     <>
       <main className="flex min-h-screen flex-col items-center p-24 gap-2 text-center">
-        <h1 className="pb-4">Don't miss out</h1>
-        <p>Sign up now to be the first to hear when the registration is open</p>
+        <h1 className="pb-4">A simple static page</h1>
         <p>
-          Join the army of{" "}
+          Using the new Next.js{" "}
+          <a href="https://nextjs.org/docs/app/building-your-application/data-fetching">
+            App Router data fetching
+          </a>{" "}
+          with revalidation set to 60 seconds. The number below is coming from
+          MongoDb to count how many people signed up for a newsletter.
+        </p>
+        <p>
           <span className="text-2xl font-bold">{count?.count}</span> users who
           already signed up... And still growing..
         </p>
         <div className="mt-9 flex">
-          <Button href="/newsletter" label="Sign up for Newsletter" />
+          <Button href="/newsletter" label="Sign Up Now" />
         </div>
       </main>
     </>
