@@ -1,14 +1,20 @@
+'user client'
 import photos from "../data/photos";
 import Image from "next/image";
 import Link from "next/link";
+
 export default function Page() {
   return (
     <div>
       <header className="flex flex-col items-center mb-8">
         <h3 className="text-center mb-3">Gallery</h3>
         <p>
-          Simple gallery page with a modal slideshow navigation using the Next.js Route intercepting. Read more{" "}
-          <a href="https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes" target="_blank">
+          Simple gallery page with a modal slideshow navigation using the
+          Next.js Route intercepting. Read more{" "}
+          <a
+            href="https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes"
+            target="_blank"
+          >
             here
           </a>
         </p>
@@ -29,4 +35,4 @@ export default function Page() {
       </div>
     </div>
   );
-}
+};

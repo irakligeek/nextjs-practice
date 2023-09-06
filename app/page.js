@@ -1,5 +1,6 @@
 import Button from "./components/ui/Button";
-
+import Image from "next/image";
+import headerImage from "../public/header-bg.png";
 const base_url = process.env.BASE_URI;
 const secret_token = process.env.SECRET_TOKEN;
 
@@ -27,7 +28,7 @@ export default async function Home() {
 
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center p-24 gap-2 text-center">
+      <main className="flex min-h-screen flex-col items-center px-24 gap-2 pt-8 text-center">
         <h1 className="pb-4">A simple static page</h1>
         <p>
           Using the new Next.js{" "}

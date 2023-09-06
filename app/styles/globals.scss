@@ -16,19 +16,16 @@
   }
 }
 
+*{
+  font-family: var(--font-roboto);
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
     @apply min-h-screen
 }
 
-
-h1 {
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-robotoSlab);
   @apply text-6xl font-bold
 }
 
