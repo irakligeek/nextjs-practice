@@ -109,14 +109,14 @@ export default function NavBar() {
         onClick={() => {
           setMobileNavbar(!mobileNavbar);
         }}
-        className="mr-4 md:hidden cursor-pointer w-8 h-6 relative"
+        className="mr-4 md:hidden cursor-pointer w-8 h-6 flex justify-between flex-col"
       >
-        <div className={`w-full h-1 bg-white text-white absolute origin-center transition-transform bottom-0 top-0
-        ${mobileNavbar && `-rotate-45 top-1/2`}`}></div>
-        <div className={`w-full h-1 bg-white text-white absolute top-1/2 -mt-[2px]
-        ${mobileNavbar && `hidden`}`}></div>
-        <div className={`w-full h-1 bg-white text-white absolute bottom-0 origin-center transition-transform
-         ${mobileNavbar && `rotate-45 top-1/2`}`}></div>
+        <div className={`w-full h-1 bg-white text-white origin-center transition-transform relative 
+        ${mobileNavbar && `-rotate-45 top-[50%]`}`}></div>
+        <div className={`w-full h-1 bg-white text-white origin-center transition-all scale-x-[100%]
+        ${mobileNavbar && `scale-x-[0%]`}`}></div>
+        <div className={`w-full h-1 bg-white text-white origin-center transition-transform relative
+         ${mobileNavbar && `rotate-45 bottom-[calc(50%-4px)]`}`}></div>
       </div>
     </header>
   );
